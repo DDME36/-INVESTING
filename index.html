@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือลงทุนสำหรับมือใหม่ | Start Investing v3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #0052FF;
+            --secondary-color: #00D2D3;
+            --background-color: #f4f7f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 1rem 4rem;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 0.8rem;
+        }
+
+        ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background-color: #e6f7ff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .warning {
+            background-color: #fffbe6;
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        /* NEW Animation on Scroll Styles */
+        .animate-on-scroll {
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: none; /* Resets transform to default (translate(0), scale(1)) */
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="animate-on-scroll fade-in-up">
+        <h1>Step แรกสู่โลกการลงทุน</h1>
+        <p>คู่มือฉบับสมบูรณ์สำหรับมือใหม่ เริ่มต้นสร้าง Portfolio ของคุณตั้งแต่วันนี้</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">Mindset & ความรู้พื้นฐาน</h2>
+            <div class="card animate-on-scroll zoom-in">
+                <h3>ทำไมต้องลงทุน?</h3>
+                <p>การลงทุนคือการนำเงินไปทำงาน เพื่อให้เงินงอกเงยเอาชนะ <span class="highlight">เงินเฟ้อ (Inflation)</span> ที่ทำให้ค่าเงินของเราลดลงทุกปี การฝากธนาคารอย่างเดียวอาจไม่เพียงพอในระยะยาว การลงทุนช่วยสร้างความมั่งคั่งและอิสรภาพทางการเงินในอนาคตได้</p>
+            </div>
+             <div class="card animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                <h3>สิ่งที่ต้องยอมรับ: ความเสี่ยง</h3>
+                <p>ทุกการลงทุนมีความเสี่ยง ไม่มีอะไรการันตีผลตอบแทน 100% หลักการสำคัญคือ <span class="highlight">High Risk, High Return</span> (เสี่ยงสูง ผลตอบแทนคาดหวังสูง) แต่เราสามารถจัดการความเสี่ยงได้ด้วยการ <span class="highlight">กระจายความเสี่ยง (Diversification)</span> คือไม่นำเงินทั้งหมดไปลงทุนในสินทรัพย์เดียว</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">เริ่มต้นง่ายๆ กับ Application "Dime"</h2>
+            <div class="card animate-on-scroll zoom-in">
+                <h3>Dime คืออะไร?</h3>
+                <p>Dime เป็น Application จากเครือธนาคารเกียรตินาคินภัทร ที่ออกแบบมาเพื่อนักลงทุนมือใหม่โดยเฉพาะ จุดเด่นคือใช้งานง่ายมาก สามารถซื้อขายหุ้นต่างประเทศ (เช่น หุ้นอเมริกา) และ ETF ได้โดยใช้เงินบาทเริ่มต้นน้อยๆ ไม่ต้องวุ่นวายกับการเปิดบัญชีต่างประเทศโดยตรง เหมาะกับการเริ่มต้นที่สุดครับ</p>
+                <ul>
+                    <li>เริ่มต้นลงทุนด้วยเงินบาทได้เลย ระบบจะแลกเป็นดอลลาร์ให้ Auto</li>
+                    <li>ซื้อหุ้นอเมริกาเป็นเศษส่วนได้ (Fractional Shares) เช่น มีเงิน 100 บาทก็ซื้อหุ้น Apple ได้</li>
+                    <li>ค่าธรรมเนียม (Commission) ค่อนข้างถูก</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">กลไกการทำกำไร และอัตราแลกเปลี่ยน</h2>
+            <div class="grid-container">
+                <div class="card animate-on-scroll fade-in-left">
+                    <h3>1. กำไรจากส่วนต่างราคา (Capital Gain)</h3>
+                    <p>นี่คือวิธีทำกำไรที่เบสิคที่สุด คือการ <span class="highlight">"ซื้อถูก ขายแพง"</span> เช่น คุณซื้อหุ้น A ที่ราคา $100 แล้วขายไปที่ราคา $120 คุณจะได้กำไร $20 (ยังไม่หักค่าธรรมเนียม)</p>
+                </div>
+                 <div class="card animate-on-scroll fade-in-right">
+                    <h3>2. เงินปันผล (Dividend)</h3>
+                    <p>บริษัทที่มีกำไรบางแห่งจะแบ่งส่วนหนึ่งของกำไรคืนให้กับผู้ถือหุ้น เรียกว่า <span class="highlight">"เงินปันผล"</span> ซึ่งเราจะได้รับเป็นเงินสดเข้า Portfolio ของเราเป็นรายไตรมาส (3 เดือน) หรือรายปี แล้วแต่นโยบายบริษัท</p>
+                </div>
+            </div>
+            <div class="card animate-on-scroll zoom-in">
+                 <h3>3. อัตราแลกเปลี่ยน (Foreign Exchange Rate)</h3>
+                 <p>เมื่อเราลงทุนในต่างประเทศ (เช่น อเมริกาผ่าน Dime) เราต้องใช้เงินดอลลาร์ (USD) ในการซื้อขาย ทำให้เรามีความเสี่ยงและโอกาสจากอัตราแลกเปลี่ยนด้วย</p>
+                 <ul>
+                    <li><b>ตอนซื้อ:</b> ถ้าเงินบาทแข็ง (เช่น 34 บาท/ดอลลาร์) เราจะใช้เงินบาทน้อยลงในการแลกเป็นดอลลาร์เพื่อไปซื้อหุ้น</li>
+                    <li><b>ตอนขาย:</b> ถ้าเงินบาทอ่อน (เช่น 37 บาท/ดอลลาร์) เมื่อเราขายหุ้นได้เงินดอลลาร์กลับมา จะแลกกลับเป็นเงินบาทได้มากขึ้น</li>
+                 </ul>
+                 <p>ดังนั้น กำไร/ขาดทุนสุทธิของเราจะมาจาก <b>(กำไร/ขาดทุนจากราคาหุ้น) + (กำไร/ขาดทุนจากอัตราแลกเปลี่ยน)</b></p>
+            </div>
+        </section>
+
+        <!-- NEW SECTION ADDED HERE -->
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">อะไรทำให้ราคาหุ้นขึ้นลง? (Demand, Supply, Bid & Ask)</h2>
+            <div class="card animate-on-scroll zoom-in">
+                <h3>หัวใจหลัก: Demand (อุปสงค์) และ Supply (อุปทาน)</h3>
+                <p>ราคาหุ้นไม่ได้ขยับขึ้นลงแบบไร้เหตุผลครับ มันเป็นไปตามกฎพื้นฐานที่สุดของเศรษฐศาสตร์เลย:</p>
+                <ul>
+                    <li><b style="color: #28a745;">ราคาขึ้น:</b> เมื่อมีคนอยาก <span class="highlight">ซื้อ (Demand)</span> มากกว่าคนอยาก <span class="highlight">ขาย (Supply)</span> ทุกคนจะแย่งกันซื้อ ทำให้ราคาถูกเสนอสูงขึ้นเรื่อยๆ เพื่อให้ได้ของมาครอบครอง สาเหตุก็เช่น ข่าวดี, ผลประกอบการโตเกินคาด, เปิดตัวนวัตกรรมใหม่ๆ</li>
+                    <li><b style="color: #dc3545;">ราคาลง:</b> เมื่อมีคนอยาก <span class="highlight">ขาย (Supply)</span> มากกว่าคนอยาก <span class="highlight">ซื้อ (Demand)</span> ทุกคนจะแย่งกันขาย ทำให้ต้องลดราคาลงเรื่อยๆ เพื่อให้ขายออก สาเหตุก็เช่น ข่าวร้าย, งบขาดทุน, ผู้บริหารลาออก</li>
+                </ul>
+            </div>
+            <div class="card animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                <h3>รู้จักคำศัพท์ในสนามเทรด: Bid และ Ask</h3>
+                <p>เวลาเราดูหน้าจอซื้อขายหุ้น เราจะเห็นตัวเลข 2 ฝั่งเสมอ มันคือราคาที่ดีที่สุดของฝั่งซื้อและฝั่งขาย ณ วินาทีนั้น</p>
+                <ul>
+                    <li><b>Bid (ฝั่งเสนอซื้อ):</b> คือราคา <span class="highlight">สูงสุด</span> ที่ "ผู้ซื้อ" ยอมจ่ายเพื่อซื้อหุ้นในตอนนี้</li>
+                    <li><b>Ask (หรือ Offer - ฝั่งเสนอขาย):</b> คือราคา <span class="highlight">ต่ำสุด</span> ที่ "ผู้ขาย" ยอมขายหุ้นออกไปในตอนนี้</li>
+                </ul>
+                <p class="warning"><b>การซื้อขายจะเกิดขึ้น (Match)</b> ก็ต่อเมื่อมีคนยอมซื้อที่ราคา Ask หรือมีคนยอมขายที่ราคา Bid ครับ / ส่วนต่างระหว่างราคา Bid และ Ask ที่ดีที่สุดเรียกว่า <b>"Spread"</b> ถ้าค่านี้น้อยๆ แปลว่าหุ้นตัวนั้นมีสภาพคล่องสูง ซื้อง่ายขายคล่องนั่นเอง</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">การจัดการภาษี (Tax) เมื่อนำเงินกลับไทย</h2>
+            <div class="card animate-on-scroll warning zoom-in">
+                <h3>กฎหมายภาษีใหม่ (เริ่มใช้ 1 ม.ค. 2567)</h3>
+                <p>สรุปให้เข้าใจง่ายที่สุดคือ: <b>"กำไรจากการลงทุนในต่างประเทศ หากนำเงินนั้นกลับเข้ามาในประเทศไทยในปีภาษีใดก็ตาม จะต้องนำ 'กำไร' ส่วนนั้นมารวมคำนวณเพื่อเสียภาษีเงินได้บุคคลธรรมดาในปีนั้น"</b></p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">รู้จักสินทรัพย์ลงทุนยอดฮิต</h2>
+            <div class="grid-container">
+                <div class="card animate-on-scroll zoom-in">
+                    <h3>หุ้นรายตัว (Stock)</h3>
+                    <p>คือการซื้อ "ส่วนหนึ่ง" ของความเป็นเจ้าของในบริษัทนั้นๆ เช่น ซื้อหุ้น AAPL ก็เหมือนเราเป็นเจ้าของบริษัท Apple ส่วนเล็กๆ ราคาหุ้นจะขึ้นลงตามผลประกอบการและความคาดหวังของนักลงทุน</p>
+                </div>
+                <div class="card animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                    <h3>ETF (Exchange-Traded Fund)</h3>
+                    <p>คือ "กองทุนรวมที่ซื้อขายในตลาดหุ้นได้เหมือนหุ้นตัวหนึ่ง" มันคือการรวมหุ้นหลายสิบหรือหลายร้อยตัวไว้ในตะกร้าเดียว แล้วแตกเป็นหน่วยย่อยๆ ให้เราซื้อ</p>
+                </div>
+                 <div class="card animate-on-scroll zoom-in" style="transition-delay: 200ms;">
+                    <h3>กองทุนรวม (Mutual Fund)</h3>
+                    <p>คล้าย ETF คือการรวมเงินจากนักลงทุนรายย่อยไปให้ <span class="highlight">"ผู้จัดการกองทุน"</span> มืออาชีพบริหารจัดการให้ แต่จะซื้อขายได้วันละ 1 ครั้งตอนสิ้นวันทำการ และมักมีค่าธรรมเนียมสูงกว่า ETF</p>
+                </div>
+                 <div class="card animate-on-scroll zoom-in" style="transition-delay: 300ms;">
+                    <h3>หุ้นปันผล (Dividend Stock)</h3>
+                    <p>คือหุ้นของบริษัทที่จ่ายปันผลสม่ำเสมอ เหมาะสำหรับคนที่ต้องการกระแสเงินสด (Cash Flow) จากการลงทุน มีทั้งจ่ายรายเดือน (เช่น หุ้น O), รายไตรมาส (ส่วนใหญ่), หรือรายปี</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">รู้จักดัชนี (Index) สำคัญ</h2>
+             <div class="card animate-on-scroll fade-in-left">
+                <h3>S&P 500</h3>
+                <p>ย่อมาจาก Standard & Poor's 500 คือดัชนีที่วัดผลการดำเนินงานของ <span class="highlight">บริษัทที่ใหญ่ที่สุด 500 แห่งในอเมริกา</span> ครอบคลุมอุตสาหกรรมหลากหลาย ถือเป็นตัวแทนของตลาดหุ้นอเมริกาทั้งหมด ถ้า S&P 500 เป็นบวก ก็หมายความว่าภาพรวมเศรษฐกิจอเมริกาค่อนข้างดี การลงทุนใน ETF ที่อิงดัชนีนี้ (เช่น VOO, IVV) จึงเป็นการลงทุนที่กระจายความเสี่ยงได้ดีที่สุดวิธีหนึ่งสำหรับมือใหม่</p>
+            </div>
+             <div class="card animate-on-scroll fade-in-right">
+                <h3>NASDAQ</h3>
+                <p>เป็นชื่อตลาดหุ้นและดัชนีที่เน้น <span class="highlight">หุ้นกลุ่มเทคโนโลยีและนวัตกรรม</span> เป็นหลัก บริษัทดังๆ ที่เรารู้จักอย่าง Apple, Microsoft, Google, Amazon, Tesla, NVIDIA ล้วนอยู่ในดัชนีนี้ (ส่วนใหญ่อยู่ใน S&P 500 ด้วย) มีความผันผวนสูงกว่า แต่ก็มีโอกาสเติบโตสูงกว่าเช่นกัน ETF ที่อิงดัชนีนี้คือ <span class="highlight">QQQ</span></p>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">เทคนิคดูแนวโน้มเบื้องต้น (Technical Analysis)</h2>
+             <div class="card animate-on-scroll zoom-in">
+                <h3>1. Moving Average (MA) - เส้นค่าเฉลี่ยเคลื่อนที่</h3>
+                <p>เป็น Indicator ที่ง่ายที่สุดและทรงพลังที่สุด มันคือ <span class="highlight">เส้นที่ลากผ่านราคาหุ้นเพื่อทำให้กราฟดูเรียบขึ้น</span> และเห็นแนวโน้มได้ชัดเจน</p>
+            </div>
+             <div class="card animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                <h3>2. RSI (Relative Strength Index) - ดัชนีวัดความแข็งแกร่งสัมพัทธ์</h3>
+                <p>เป็น Indicator ที่ใช้วัด <span class="highlight">"โมเมนตัม"</span> ของราคา ว่าตอนนี้มีการซื้อมากเกินไป หรือขายมากเกินไปหรือยัง</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">เจาะลึกการวิเคราะห์หุ้นเติบโต (Fundamental Analysis)</h2>
+            
+            <div class="card animate-on-scroll zoom-in">
+                <h3>Part 1: การวิเคราะห์เชิงคุณภาพ (Qualitative) - "เรื่องราว" ของบริษัท</h3>
+                <ul>
+                    <li><b>Business Model:</b> บริษัททำเงินได้อย่างไร? สินค้า/บริการคืออะไร? จุดแข็งที่คู่แข่งลอกเลียนแบบได้ยาก (<span class="highlight">Competitive Moat</span>) คืออะไร?</li>
+                    <li><b>นวัตกรรม (Innovation):</b> บริษัทกำลังพัฒนาอะไรใหม่ๆ ที่จะมาเปลี่ยนโลกหรืออุตสาหกรรมได้บ้าง?</li>
+                    <li><b>ผู้บริหาร (Management):</b> ทีมผู้บริหารมีวิสัยทัศน์ (Vision) แค่ไหน? มีประวัติดีหรือไม่?</li>
+                </ul>
+            </div>
+
+            <div class="card animate-on-scroll zoom-in" style="transition-delay: 100ms;">
+                <h3>Part 2: การวิเคราะห์เชิงปริมาณ (Quantitative) - "ตัวเลข" ไม่เคยโกหก</h3>
+                <p>เราสามารถดูตัวเลขเหล่านี้ได้จากเว็บการเงินทั่วไป เช่น Yahoo Finance, Finviz หรือจากในแอป Dime เองก็มีสรุปให้ดูครับ</p>
+            </div>
+
+            <div class="card animate-on-scroll zoom-in" style="transition-delay: 200ms;">
+                 <h3>Part 3: ติดตามข่าวสารจากที่ไหน?</h3>
+                 <ul>
+                    <li><b>Investor Relations (IR) Website:</b> เข้าเว็บของบริษัทที่สนใจโดยตรง แล้วหาเมนู "Investor Relations"</li>
+                    <li><b>เว็บข่าวการเงิน:</b> Bloomberg, Reuters, Wall Street Journal (WSJ) สำหรับข่าวใหญ่ๆ</li>
+                    <li><b>เว็บสรุปข้อมูล:</b> Yahoo Finance, Seeking Alpha, Finviz.com เป็นเว็บที่ดีมากสำหรับดูตัวเลข งบการเงิน และบทวิเคราะห์</li>
+                 </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2 class="animate-on-scroll fade-in-up">สรุปส่งท้าย: Next Steps</h2>
+             <div class="card animate-on-scroll zoom-in">
+                <p>การลงทุนคือการเดินทางระยะยาวครับคุณโดม ไม่ต้องรีบร้อน ค่อยๆ ศึกษาและเริ่มต้นจากเงินจำนวนน้อยๆ ที่พร้อมจะเสียได้ก่อน</p>
+                <ol style="padding-left: 20px;">
+                    <li><b>เปิดบัญชี:</b> ลองโหลดแอป Dime มาลองเล่น ลองเปิดบัญชีดูก่อนได้เลย</li>
+                    <li><b>เริ่มด้วย ETF:</b> สำหรับมือใหม่ การเริ่มต้นด้วย ETF ที่อิงดัชนีอย่าง <span class="highlight">VOO (S&P 500)</span> เป็นจุดเริ่มต้นที่ปลอดภัยและกระจายความเสี่ยงได้ดีที่สุด</li>
+                    <li><b>ลองวิเคราะห์:</b> ลองเลือกบริษัทที่คุณรู้จักและชื่นชอบ (เช่น Apple, Microsoft, Starbucks) แล้วลองนำหัวข้อในส่วน Fundamental Analysis ไปลองวิเคราะห์ดูเล่นๆ ครับ</li>
+                    <li><b>เรียนรู้ต่อเนื่อง:</b> โลกการลงทุนเปลี่ยนแปลงเสมอ การติดตามข่าวสารและเรียนรู้เพิ่มเติมจะทำให้เราเป็นนักลงทุนที่ดีขึ้นครับ</li>
+                </ol>
+                <p style="margin-top: 1rem;">ขอให้สนุกกับการเดินทางสายการเงินใหม่นี้นะครับ! Just start and keep learning!</p>
+            </div>
+        </section>
+
+    </div>
+    
+    <footer>
+        <p>Disclaimer: เนื้อหานี้จัดทำขึ้นเพื่อวัตถุประสงค์ในการให้ข้อมูลเท่านั้น ไม่ใช่คำแนะนำทางการเงิน การลงทุนมีความเสี่ยง ผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน</p>
+        <p>Created for Learning by Gemini &copy; 2025</p>
+    </footer>
+
+    <script>
+        // This script will add the 'is-visible' class to elements when they scroll into view.
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // When the element is in view, add the 'is-visible' class
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe each element
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
