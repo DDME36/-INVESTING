@@ -4,181 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คู่มือลงทุนสำหรับมือใหม่ | Start Investing v3</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
-
-        :root {
-            --primary-color: #0052FF;
-            --secondary-color: #00D2D3;
-            --background-color: #f4f7f9;
-            --text-color: #333;
-            --card-bg: #ffffff;
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Kanit', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 5rem 1rem 4rem;
-            text-align: center;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--text-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-left: 5px solid var(--secondary-color);
-            padding-left: 1rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow);
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-        }
-        
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 0.8rem;
-        }
-
-        ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-        
-        .highlight {
-            background-color: #e6f7ff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            font-weight: 500;
-            color: var(--primary-color);
-        }
-        
-        .warning {
-            background-color: #fffbe6;
-            border-left: 5px solid #ffc107;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-        }
-
-        /* NEW Animation on Scroll Styles */
-        .animate-on-scroll {
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-        }
-        
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-
-        .zoom-in {
-            opacity: 0;
-            transform: scale(0.9);
-        }
-
-        .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: none; /* Resets transform to default (translate(0), scale(1)) */
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -188,7 +14,7 @@
     </header>
 
     <div class="container">
-        
+
         <section>
             <h2 class="animate-on-scroll fade-in-up">Mindset & ความรู้พื้นฐาน</h2>
             <div class="card animate-on-scroll zoom-in">
@@ -258,7 +84,7 @@
                 <p class="warning"><b>การซื้อขายจะเกิดขึ้น (Match)</b> ก็ต่อเมื่อมีคนยอมซื้อที่ราคา Ask หรือมีคนยอมขายที่ราคา Bid ครับ / ส่วนต่างระหว่างราคา Bid และ Ask ที่ดีที่สุดเรียกว่า <b>"Spread"</b> ถ้าค่านี้น้อยๆ แปลว่าหุ้นตัวนั้นมีสภาพคล่องสูง ซื้อง่ายขายคล่องนั่นเอง</p>
             </div>
         </section>
-        
+
         <section>
             <h2 class="animate-on-scroll fade-in-up">การจัดการภาษี (Tax) เมื่อนำเงินกลับไทย</h2>
             <div class="card animate-on-scroll warning zoom-in">
@@ -288,7 +114,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section>
             <h2 class="animate-on-scroll fade-in-up">รู้จักดัชนี (Index) สำคัญ</h2>
              <div class="card animate-on-scroll fade-in-left">
@@ -300,7 +126,7 @@
                 <p>เป็นชื่อตลาดหุ้นและดัชนีที่เน้น <span class="highlight">หุ้นกลุ่มเทคโนโลยีและนวัตกรรม</span> เป็นหลัก บริษัทดังๆ ที่เรารู้จักอย่าง Apple, Microsoft, Google, Amazon, Tesla, NVIDIA ล้วนอยู่ในดัชนีนี้ (ส่วนใหญ่อยู่ใน S&P 500 ด้วย) มีความผันผวนสูงกว่า แต่ก็มีโอกาสเติบโตสูงกว่าเช่นกัน ETF ที่อิงดัชนีนี้คือ <span class="highlight">QQQ</span></p>
             </div>
         </section>
-        
+
         <section>
             <h2 class="animate-on-scroll fade-in-up">เทคนิคดูแนวโน้มเบื้องต้น (Technical Analysis)</h2>
              <div class="card animate-on-scroll zoom-in">
@@ -315,7 +141,7 @@
 
         <section>
             <h2 class="animate-on-scroll fade-in-up">เจาะลึกการวิเคราะห์หุ้นเติบโต (Fundamental Analysis)</h2>
-            
+
             <div class="card animate-on-scroll zoom-in">
                 <h3>Part 1: การวิเคราะห์เชิงคุณภาพ (Qualitative) - "เรื่องราว" ของบริษัท</h3>
                 <ul>
@@ -339,7 +165,7 @@
                  </ul>
             </div>
         </section>
-        
+
         <section>
             <h2 class="animate-on-scroll fade-in-up">สรุปส่งท้าย: Next Steps</h2>
              <div class="card animate-on-scroll zoom-in">
@@ -355,33 +181,13 @@
         </section>
 
     </div>
-    
+
     <footer>
         <p>Disclaimer: เนื้อหานี้จัดทำขึ้นเพื่อวัตถุประสงค์ในการให้ข้อมูลเท่านั้น ไม่ใช่คำแนะนำทางการเงิน การลงทุนมีความเสี่ยง ผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน</p>
         <p>Created for Learning by Gemini &copy; 2025</p>
     </footer>
 
-    <script>
-        // This script will add the 'is-visible' class to elements when they scroll into view.
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // When the element is in view, add the 'is-visible' class
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, {
-            threshold: 0.1 // Trigger when 10% of the element is visible
-        });
-
-        // Observe each element
-        animatedElements.forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
-
